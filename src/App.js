@@ -1,13 +1,13 @@
-import {fetchUser} from "./redux/reducers"
+import { fetchUser } from "./redux/reducers";
 import { useDispatch } from "react-redux";
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux";
 
 function App() {
-  let dispatch  = useDispatch();
+  let dispatch = useDispatch();
   let state = useSelector((state) => {
     return state.data;
-  })
- console.log(state);
+  });
+  console.log(state);
   return (
     <div className="App">
       <button
@@ -43,7 +43,6 @@ function App() {
                     <td>{el.website}</td>
                     <td>{el.company["name"]}</td>
                   </tr>
-                  ;
                 </>
               );
             })}
